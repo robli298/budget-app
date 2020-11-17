@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BudgetItemModel } from 'src/app/shared/models/budget-item.model';
 
 @Component({
@@ -9,14 +9,15 @@ import { BudgetItemModel } from 'src/app/shared/models/budget-item.model';
 })
 export class BudgetItemCardComponent implements OnInit {
 
-  @Input()
-  isIncome: boolean = true;
-
   @Input() item: BudgetItemModel;
+  @Output() xButtonClick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onXButtonClick() {
+    this.xButtonClick.emit();
+  }
 }

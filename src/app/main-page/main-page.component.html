@@ -10,4 +10,4 @@
     </div>
 </section>
 <hr class="add-item-section-separator" />
-<app-budget-items-list [budgetItems]="budgetItems"></app-budget-items-list>
+<app-budget-items-list [budgetItems]="budgetItems" (delete)="onDeleteItem($event)"></app-budget-items-list>

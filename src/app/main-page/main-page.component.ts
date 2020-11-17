@@ -16,7 +16,11 @@ export class MainPageComponent implements OnInit {
   }
 
   addNewItem(item: BudgetItemModel) {
-    this.budgetItems.push(item);
+    this.budgetItems = this.budgetItems.concat([item]);
+  }
+
+  onDeleteItem(item: BudgetItemModel) {
+    this.budgetItems.splice(this.budgetItems.indexOf(item), 1);
   }
 
 }
