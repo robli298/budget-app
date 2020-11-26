@@ -9,6 +9,7 @@ import { BudgetItemModel } from '../shared/models/budget-item.model';
 export class MainPageComponent implements OnInit {
 
   budgetItems: BudgetItemModel[] = new Array<BudgetItemModel>();
+  totalAmount: number;
 
   constructor() { }
 
@@ -17,10 +18,20 @@ export class MainPageComponent implements OnInit {
 
   addNewItem(item: BudgetItemModel) {
     this.budgetItems = this.budgetItems.concat([item]);
+    this.updateTotalAmount();
   }
 
   onDeleteItem(item: BudgetItemModel) {
     this.budgetItems.splice(this.budgetItems.indexOf(item), 1);
+    this.updateTotalAmount();
+  }
+
+  updateTotalAmount() {
+    if (this.budgetItems && this.budgetItems.length !== 0) {
+      this.totalAmount = this.budgetItems.map(item => item.amount).reduce((a, b) => a + b);
+      return;
+    }
+    this.totalAmount = 0;
   }
 
 }

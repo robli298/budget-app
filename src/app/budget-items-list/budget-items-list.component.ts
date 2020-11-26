@@ -1,5 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.component';
 import { BudgetItemModel } from '../shared/models/budget-item.model';
 
 @Component({
@@ -31,13 +33,28 @@ export class BudgetItemsListComponent implements OnInit {
   @Output()
   delete: EventEmitter<BudgetItemModel> = new EventEmitter<BudgetItemModel>();
 
-  constructor() { }
+  constructor(public dialog: MatDialog, private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
 
   onDeleteButtonClicked(item: BudgetItemModel) {
     this.delete.emit(item);
+  }
+
+  onCardClicked(item: BudgetItemModel) {
+
+    const dialogRef = this.dialog.open(EditItemModalComponent, {
+      width: '580px',
+      data: item
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.budgetItems[this.budgetItems.indexOf(item)] = result;
+        this.ref.markForCheck();
+      }
+    })
   }
 
   trackByIndex = (index: number, item: BudgetItemModel) => index;
