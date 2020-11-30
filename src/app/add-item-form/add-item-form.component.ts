@@ -14,7 +14,7 @@ export class AddItemFormComponent implements OnInit {
   @Output() formSubmit: EventEmitter<BudgetItemModel> = new EventEmitter<BudgetItemModel>();
 
   isNewItem: boolean;
-  buttonLabel: string = 'Save';
+  buttonLabel: string = $localize`Save`;
 
   constructor() { }
 
@@ -22,7 +22,7 @@ export class AddItemFormComponent implements OnInit {
     this.isNewItem = !this.item;
     if (this.isNewItem) {
       this.item = new BudgetItemModel('', null);
-      this.buttonLabel = 'Add';
+      this.buttonLabel = $localize`Add`;
     }
   }
 
