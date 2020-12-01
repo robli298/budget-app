@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="pt">
+    <body>
+      <trans-unit id="3768927257183755959" datatype="html">
+        <source>Save</source>
+        <target>Salvar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3249513483374643425" datatype="html">
+        <source>Add</source>
+        <target>Adicionar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dfc2fb58e2a04ed944a4bd80f0a2087775134068" datatype="html">
+        <source>Amount</source>
+        <target>Montante</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <target>Descrição</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="687085b53797da5dbef31ec2560c29d15aac16f9" datatype="html">
+        <source>Incomes</source>
+        <target>Redimentos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget-items-list/budget-items-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0cc796298c56feb15cc63c29ca63d4261284dc08" datatype="html">
+        <source>Expenses</source>
+        <target>Despesas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget-items-list/budget-items-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45ad06319afd48861a2b9fd86ca97517623be3ee" datatype="html">
+        <source>Budget Calculator</source>
+        <target>Calculadora de orçamento</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description"> The application main title</note>
+        <note priority="1" from="meaning">main title </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

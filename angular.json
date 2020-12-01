@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "budget-app": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt": "src/i18n/messages.pt.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/budget-app",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,6 +40,11 @@
             "scripts": []
           },
           "configurations": {
+            "pt": {
+              "localize": [
+                "pt"
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +82,9 @@
           "configurations": {
             "production": {
               "browserTarget": "budget-app:build:production"
+            },
+            "pt": {
+              "browserTarget": "budget-app:build:pt"
             }
           }
         },

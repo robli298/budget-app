@@ -1,7 +1,7 @@
 <section class="budget-items-section">
     <div class="budget-items-container">
         <div class="income-column">
-            <h1>Incomes</h1>
+            <h1 i18n>Incomes</h1>
             <div class="budget-items">
                 <div *ngFor="let item of budgetItems; trackBy: trackByIndex">
                     <app-budget-item-card (cardClicked)="onCardClicked(item)" [@simpleFadeAnimation]="'in'"
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="expenses-column">
-            <h1>Expenses</h1>
+            <h1 i18n>Expenses</h1>
             <div class="budget-items">
                 <ng-container *ngFor="let item of budgetItems; trackBy: trackByIndex">
                     <app-budget-item-card (cardClicked)="onCardClicked(item)" [@simpleFadeAnimation]="'in'"
