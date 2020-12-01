@@ -18,6 +18,22 @@
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="dfc2fb58e2a04ed944a4bd80f0a2087775134068" datatype="html">
+        <source>Amount</source>
+        <target>Montante</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <target>Descrição</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/add-item-form/add-item-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="687085b53797da5dbef31ec2560c29d15aac16f9" datatype="html">
         <source>Incomes</source>
         <target>Redimentos</target>
