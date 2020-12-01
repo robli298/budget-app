@@ -1,0 +1,32 @@
+@import '../../main-styles';
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 80px 600px 80px;
+    height: 100vh;
+    .navbar {
+        background-color: $mainGreen;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+    .sidebar {
+         background: green;
+         grid-column: 1 / 2;
+         grid-row: 2 / 3;
+    }
+    .main {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        background: pink;
+    }
+
+    .footer {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        background: yellow;
+    }
+}
