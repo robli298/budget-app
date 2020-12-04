@@ -1,22 +1,17 @@
 <div class="grid-container">
-
     <div class="navbar">
         <div class="sidebar-control">
-            <span (click)="isOpened = !isOpened">
+            <span (click)="sidebarStatus = sidebarStatus === 'out' ? 'in' : 'out'">
                 <i class="fa fa-bars"></i>
             </span>
         </div>
         <div class="menu-bar-area">
-
         </div>
     </div>
-
     <div class="content-wrapper">
-        <div class="sidebar" [ngClass]="{ 'opened': isOpened, 'closed':!isOpened}">
-
+        <div class="sidebar" [@slideInOut]="sidebarStatus">
         </div>
         <div class="main">
-
         </div>
     </div>
     <div class="footer-area">
