@@ -1,8 +1,23 @@
-<div class="container-grid">
-    <div class="navbar">Navbar</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="main">
-        Main
+<div class="grid-container">
+
+    <div class="navbar">
+        <div class="sidebar-control">
+            <span (click)="isOpened = !isOpened">
+                <fa-icon [icon]="faBars"></fa-icon>
+            </span>
+        </div>
+        <div class="menu-bar-area">
+
+        </div>
     </div>
-    <div class="footer">Footer</div>
+
+    <div class="content-wrapper">
+        <div class="sidebar" [ngClass]="{ 'opened': isOpened, 'closed':!isOpened}">
+
+        </div>
+        <div class="main">
+
+        </div>
+    </div>
+    <div class="footer-area"></div>
 </div>
