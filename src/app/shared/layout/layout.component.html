@@ -1,7 +1,7 @@
 <div class="grid-container">
     <div class="navbar">
         <div class="sidebar-control">
-            <span (click)="sidebarStatus = sidebarStatus === 'out' ? 'in' : 'out'">
+            <span (click)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
                 <i class="fa fa-bars"></i>
             </span>
         </div>
@@ -9,8 +9,7 @@
         </div>
     </div>
     <div class="content-wrapper">
-        <div class="sidebar" [@slideInOut]="sidebarStatus">
-        </div>
+        <app-sidebar [sidebarStatus]="sidebarStatus"></app-sidebar>
         <div class="main">
         </div>
     </div>

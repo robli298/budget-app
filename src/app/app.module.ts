@@ -11,6 +11,7 @@ import { BudgetItemsListComponent } from './budget-items-list/budget-items-list.
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LayoutComponent } from './shared/layout/layout.component';
+import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LayoutComponent } from './shared/layout/layout.component';
     BudgetItemsListComponent,
     BudgetItemCardComponent,
     EditItemModalComponent,
-    LayoutComponent
+    LayoutComponent,
+    SidebarComponent
   ],
   imports: [
     AppRoutingModule,
