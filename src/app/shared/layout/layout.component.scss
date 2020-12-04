@@ -62,12 +62,28 @@
     }
 
     .footer-area {
-        position: sticky;
-        position: -webkit-sticky;
-        background-color: $light-purple;
+        color: $dark;
+        background-color: #e5e7ec;
         position: fixed;
         bottom: 0;
         width: 100%;
         height: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2em;
+
+        .social-media-area {
+            display: flex;
+            justify-content: space-around;
+
+            .fa {
+                font-size: 2.5em;
+                margin: 10px;
+
+            }
+
+            padding-right: 2em;
+        }
     }
 }
