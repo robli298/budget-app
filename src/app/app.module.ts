@@ -11,7 +11,6 @@ import { BudgetItemsListComponent } from './budget-items-list/budget-items-list.
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LayoutComponent } from './shared/layout/layout.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, FontAwesomeModule
+    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

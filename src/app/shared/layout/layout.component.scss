@@ -1,6 +1,7 @@
 @import '../../main-styles';
 
 /* https://codepen.io/tutsplus/pen/bGVPVrY */
+
 .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -17,7 +18,7 @@
         align-items: center;
 
         .sidebar-control {
-            margin-left: 5em;
+            margin-left: 4.3em;
 
             &:hover {
                 box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
@@ -53,7 +54,7 @@
         .closed {
             background: $dark-blue;
             min-width: 60px;
-            width: 5em;
+            width: 3em;
         }
 
         .main {
