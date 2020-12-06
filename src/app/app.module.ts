@@ -12,6 +12,7 @@ import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.compon
 import { MainPageComponent } from './main-page/main-page.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
     BudgetItemCardComponent,
     EditItemModalComponent,
     LayoutComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
