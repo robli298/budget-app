@@ -10,9 +10,10 @@ import { BudgetItemCardComponent } from './budget-items-list/budget-item-card/bu
 import { BudgetItemsListComponent } from './budget-items-list/budget-items-list.component';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
-import { FooterComponent } from './shared/layout/footer/footer.component';
+import { NavbarComponent } from './shared/layout/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
     EditItemModalComponent,
     LayoutComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     AppRoutingModule,

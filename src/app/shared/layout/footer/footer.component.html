@@ -1,10 +1,9 @@
-<div class="footer">
-    <span>Version 1.0 Copyright © 2020-2021 <a href="https://github.com/robli298">Rob Li</a>. All rights reserved.
+<div class="app-footer">
+    <span>Version {{data.version}} Copyright © 2020-2021 <a href="https://github.com/robli298">Rob Li</a>. All rights
+        reserved.
     </span>
     <div class="social-media-area">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-github"></a>
+        <a *ngFor="let socialMedia of data.socialMedias;" href="{{socialMedia.url}}"
+            class="fa {{socialMedia.iconClass}}"></a>
     </div>
 </div>

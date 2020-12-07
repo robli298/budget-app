@@ -1,19 +1,12 @@
-<div class="grid-container">
-    <div class="navbar">
-        <div class="logo">
-            <p>RL</p>
-        </div>
-        <div class="siderbar-control"><span
-                (click)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
-                <i class="fa fa-bars"></i>
-            </span></div>
-        <div class="menu-bar-area">
-        </div>
+<div class="app-container">
+    <div class="app-navbar">
+        <app-navbar (toggleClicked)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
+        </app-navbar>
     </div>
-    <div class="content-wrapper">
+    <div class="app-main">
         <app-sidebar [sidebarStatus]="sidebarStatus"></app-sidebar>
-        <div class="main">
-        </div>
     </div>
-    <app-footer></app-footer>
+    <div class="app-footer">
+        <app-footer></app-footer>
+    </div>
 </div>

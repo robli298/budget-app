@@ -1,10 +1,7 @@
  @import '../../../main-styles';
 
- .sidebar {
-     justify-content: space-between;
-     position: fixed;
-     height: 91%;
-     overflow-x: hidden;
+ .sidebar-component {
+     height: 100%;
      transition: all 0.3s ease-in-out;
      background: $dark-blue;
      width: 30%;

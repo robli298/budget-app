@@ -1,53 +1,36 @@
 @import '../../main-styles';
 
-/* https://codepen.io/tutsplus/pen/bGVPVrY */
-
-.grid-container {
+.app-container {
+    width: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 0%;
-    height: 80vh;
+    grid-template-rows: 0.050fr 1fr 0.040fr;
 
-    .navbar {
+    .app-navbar {
         background-image: linear-gradient(45deg, $dark-blue, $purple);
         position: sticky;
         position: -webkit-sticky;
         top: 0;
-        grid-column-end: span 2;
         display: flex;
-        align-items: center;
-
+        align-items: stretch;
 
         .logo {
-            height: 100%;
-            width: 4em;
+            flex: 0.0255;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
             box-shadow: 0px 0 20px -7px rgba(0, 0, 0, .2);
-            /*
-            none|h-offset v-offset blur spread color |inset|initial|inherit;
-            */
-
-            p {
-                font-weight: 600;
-                margin: 0 auto;
-                top: 30%;
-                margin-left: 15px;
-                position: relative;
-            }
-
-            margin-right: 5px;
         }
 
-        .sidebar-control {
+        .sidebar-toggle {
             display: flex;
-            height: 100%;
+            align-items: center;
         }
     }
 
-    .content-wrapper {
-        grid-column-end: span 3;
+    .app-footer {
+        background-color: #e5e7ec;
 
-        .main {
-            flex: 1;
-        }
     }
 }

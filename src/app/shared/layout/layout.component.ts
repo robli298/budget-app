@@ -9,6 +9,7 @@ export class LayoutComponent implements OnInit {
 
   sidebarStatus: string;
 
+
   constructor() { }
 
   ngOnInit(): void {
