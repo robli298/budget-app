@@ -1,0 +1,26 @@
+@import '../../../main-styles';
+
+:host {
+    display: flex;
+    align-items: stretch;
+    background-image: linear-gradient(45deg, $dark-blue, $purple);
+    height: 100%;
+
+    .logo {
+        flex: 0.0255;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        box-shadow: 0px 0 20px -7px rgba(0, 0, 0, .2);
+    }
+
+    .sidebar-toggle {
+        display: flex;
+        align-items: center;
+
+        i:active {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+    }
+}

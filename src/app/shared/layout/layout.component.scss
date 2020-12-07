@@ -1,0 +1,33 @@
+@import '../../main-styles';
+
+.app-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.050fr 1fr 0.040fr;
+
+    .app-navbar {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+
+    .app-main {
+        display: flex;
+
+        app-sidebar {
+            width: 50%;
+        }
+
+        .content-area {
+            width: 100%;
+            height: 100%;
+            transition: margin-left 0.1s ease-in;
+            margin-left: -30.5%;
+
+            &.is-full-width {
+                margin-left: -46%;
+            }
+        }
+    }
+}
