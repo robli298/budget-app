@@ -1,9 +1,9 @@
  @import '../../../main-styles';
 
- .sidebar-component {
-     height: 100%;
-     transition: all 0.3s ease-in-out;
-     background: $dark-blue;
-     width: 30%;
-     max-width: 250px;
- }
+ div {
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    background: $dark-blue;
+    width: 30%;
+    max-width: 250px;
+}

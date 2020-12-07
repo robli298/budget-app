@@ -1,6 +1,6 @@
  @import '../../../main-styles';
 
- .app-footer {
+ :host {
      color: $dark;
      background-color: #e5e7ec;
      position: fixed;

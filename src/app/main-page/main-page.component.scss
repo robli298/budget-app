@@ -13,7 +13,7 @@
 .total-budget-section {
     display: flex;
     height: 260px;
-    background-color: $dark;
+    //background-color: $dark;
     justify-content: center;
     align-items: center;
 
@@ -47,11 +47,13 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: moveAnim 1s ease-out;
+
     .add-item-container {
-      width: 680px;
-      .add-item-area {
-          padding: 10px;
-      }
+        width: 680px;
+
+        .add-item-area {
+            padding: 10px;
+        }
     }
 }
 
@@ -60,10 +62,11 @@ h1 {
 }
 
 @keyframes moveAnim {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 100%;
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }

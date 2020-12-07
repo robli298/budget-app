@@ -5,10 +5,14 @@ import { LayoutComponent } from './shared/layout/layout.component';
 
 const routes: Routes = [{
   path: '',
-  component: MainPageComponent
-}, {
-  path: 'test',
-  component: LayoutComponent
+  component: LayoutComponent,
+  children: [
+    {
+      path: 'test',
+      component: MainPageComponent
+    }
+  ]
+
 }];
 
 @NgModule({
