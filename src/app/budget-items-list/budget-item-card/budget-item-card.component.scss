@@ -7,7 +7,7 @@
 
 .root {
     display: flex;
-    width:100%;
+    width: 100%;
     position: relative;
 
     &:hover {
@@ -48,7 +48,7 @@
     transition: background-color 0.2s ease-out;
 
     &:hover {
-        background-color:  darken($beige-lighter, 10%);
+        background-color: darken($beige-lighter, 10%);
     }
 
     .description {

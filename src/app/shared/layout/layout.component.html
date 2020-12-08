@@ -1,4 +1,4 @@
-<div class="app-container">
+<div class="app-container" *ngIf="layoutData$ | async as layoutData">
     <div class="app-navbar">
         <app-navbar (toggleClicked)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
         </app-navbar>
@@ -15,6 +15,6 @@
     </div>
 
     <div class="app-footer">
-        <app-footer></app-footer>
+        <app-footer [data]="layoutData.footer"></app-footer>
     </div>
 </div>

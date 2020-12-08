@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -10,10 +11,7 @@ import { BudgetItemCardComponent } from './budget-items-list/budget-item-card/bu
 import { BudgetItemsListComponent } from './budget-items-list/budget-items-list.component';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { FooterComponent } from './shared/layout/footer/footer.component';
-import { LayoutComponent } from './shared/layout/layout.component';
-import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
-import { NavbarComponent } from './shared/layout/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,15 +20,11 @@ import { NavbarComponent } from './shared/layout/navbar/navbar.component';
     AddItemFormComponent,
     BudgetItemsListComponent,
     BudgetItemCardComponent,
-    EditItemModalComponent,
-    LayoutComponent,
-    SidebarComponent,
-    FooterComponent,
-    NavbarComponent
+    EditItemModalComponent
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule
+    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
