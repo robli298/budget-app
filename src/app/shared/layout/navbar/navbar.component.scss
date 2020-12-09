@@ -2,25 +2,73 @@
 
 :host {
     display: flex;
-    align-items: stretch;
     background-image: linear-gradient(45deg, $dark-blue, $purple);
     height: 100%;
+    min-height: 50px;
 
-    .logo {
-        flex: 0.0255;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        box-shadow: 0px 0 20px -7px rgba(0, 0, 0, .2);
+    .fa {
+        font-size: 1.5em;
     }
 
-    .sidebar-toggle {
+    .header-container-left {
         display: flex;
+        flex: 1;
+
+        .sidebar-toggle {
+            width: 50px;
+            box-shadow: 0px 0 20px -7px rgba(0, 0, 0, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i:active {
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            }
+        }
+    }
+
+    .header-container-right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
         align-items: center;
 
-        i:active {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        .alerts-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .fa {
+                margin-right: 15px;
+
+                &:active {
+                    transform: translateY(-1px);
+                }
+            }
+        }
+
+        .user-container {
+            display: flex;
+            flex: 0.2;
+            align-items: center;
+            justify-content: space-around;
+
+            .user-picture {
+                background-size: cover;
+                background-image: url("../../../../assets/images/me.jpg");
+                height: 2.1rem;
+                width: 2.1rem;
+                border-radius: 50%;
+                border: 1px solid #ebebeb;
+            }
+
+            .info-container {
+                flex: 0.8;
+
+                p {
+                    font-weight: 900;
+                }
+            }
         }
     }
 }

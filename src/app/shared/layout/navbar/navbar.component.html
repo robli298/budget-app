@@ -1,7 +1,19 @@
-<div class="logo">
-    <p>RL</p>
+<div class="header-container-left">
+    <div class="sidebar-toggle"><span (click)="toggleClicked.emit()">
+            <i class="fa fa-bars"></i>
+        </span>
+    </div>
 </div>
-<div class="sidebar-toggle"><span (click)="toggleClicked.emit()">
-        <i class="fa fa-bars"></i>
-    </span>
+<div class="header-container-right">
+    <div class="alerts-container">
+        <div><i class="fa fa-comments-o"></i></div>
+        <div><i class="fa fa-envelope-o"></i></div>
+        <div><i class="fa fa-bell"></i></div>
+    </div>
+    <div class="user-container">
+        <div class="user-picture"></div>
+        <div class="info-container">
+            <p>Invader zim</p>
+        </div>
+    </div>
 </div>
