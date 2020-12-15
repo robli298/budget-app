@@ -1,4 +1,17 @@
 {
+    "navbar": {
+        "alerts": [
+            {
+                "iconClass": "fa-comments-o"
+            },
+            {
+                "iconClass": "fa-envelope-o"
+            },
+            {
+                "iconClass": "fa-bell"
+            }
+        ]
+    },
     "footer": {
         "version": "1.0",
         "socialMedias": [
