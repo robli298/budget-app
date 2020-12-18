@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LayoutModel } from '../shared/models/layout.model';
+import { LayoutModel } from '../../shared/models/layout.model';
 
 @Injectable({
     providedIn: 'root'
