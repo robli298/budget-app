@@ -10,6 +10,6 @@ export class StateLayoutService {
     constructor(private http: HttpClient) { }
 
     load(): Observable<LayoutModel> {
-        return this.http.get<LayoutModel>('../assets/data/layout-settings.json');
+        return this.http.get<LayoutModel>('./assets/data/layout-settings.json');
     }
 }
