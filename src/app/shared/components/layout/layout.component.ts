@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutModel } from "@app/models";
+import { StateLayoutService } from '@app/services';
 import { Observable } from 'rxjs';
-import { StateLayoutService } from 'src/app/core/services/state-layout.service';
-import { LayoutModel } from '../../models/layout.model';
 
 @Component({
   selector: 'app-layout',

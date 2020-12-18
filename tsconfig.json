@@ -19,8 +19,11 @@
       "dom"
     ],
     "paths": {
-      "@app/*": [
-        "app/*"
+      "@app/services": [
+        "./src/app/core/services/"
+      ],
+      "@app/models": [
+        "./src/app/shared/models/"
       ]
     }
   },
