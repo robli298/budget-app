@@ -1,4 +1,4 @@
-@import '../../../main-styles';
+@import "colors";
 
 :host {
     display: flex;
@@ -55,7 +55,7 @@
 
             .user-picture {
                 background-size: cover;
-                background-image: url("../../../../assets/images/me.jpg");
+                background-image: url("/assets/images/me.jpg");
                 height: 2.1rem;
                 width: 2.1rem;
                 border-radius: 50%;
