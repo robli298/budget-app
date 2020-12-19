@@ -16,12 +16,18 @@
         display: flex;
         justify-content: space-around;
         font-size: 2.1em;
+        color: $purple;
 
         a {
             margin: 10px;
+            text-decoration: none;
 
             &:hover {
                 transform: scale(1.2);
+            }
+
+            &.fa::before {
+                color: $purple;
             }
         }
 
