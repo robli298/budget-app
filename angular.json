@@ -39,7 +39,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src/styles/global"
+                "./src/styles/abstracts",
+                "./src/styles/base"
               ]
             },
             "scripts": []
