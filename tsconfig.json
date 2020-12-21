@@ -23,7 +23,7 @@
         "./src/app/core/services/"
       ],
       "@app/models": [
-        "./src/app/shared/models/"
+        "./src/app/core/models/"
       ]
     }
   },

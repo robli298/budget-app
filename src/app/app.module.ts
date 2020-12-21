@@ -6,8 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/_pages.module';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, PagesModule, SharedModule
+    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, PagesModule, CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
