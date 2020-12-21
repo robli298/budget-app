@@ -3,6 +3,7 @@ import { LayoutModel } from "@app/models";
 import { StateLayoutService } from '@app/services';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
