@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { PagesModule } from './pages/_pages.module';
+import { AuthModule } from './features/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { PagesModule } from './pages/_pages.module';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, PagesModule, CoreModule
+    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, CoreModule, AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,13 @@
     justify-content: space-between;
     padding-left: 2em;
 
+    span {
+        font-size: 1.1rem;
+        a {
+            font-size: inherit;
+        }
+    }
+
     .social-media-area {
         display: flex;
         justify-content: space-around;
