@@ -1,13 +1,20 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppConfigService } from '@app/services';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './features/auth/auth.module';
+
+export function initializeApp(
+  appConfig: AppConfigService
+) {
+  return () => appConfig.loadConfiguration();
+}
 
 @NgModule({
   declarations: [
@@ -17,7 +24,15 @@ import { AuthModule } from './features/auth/auth.module';
     AppRoutingModule,
     BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, CoreModule, AuthModule
   ],
-  providers: [],
+  providers: [
+    AppConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      multi: true,
+      deps: [AppConfigService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
