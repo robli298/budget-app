@@ -1,14 +1,11 @@
 @use "variables";
+@use "mixins";
 
 :host {
     display: flex;
     background-image: linear-gradient(45deg, variables.$dark-blue, variables.$purple);
     height: 100%;
     min-height: 50px;
-
-    .fa {
-        font-size: 1.5em;
-    }
 
     .header-container-left {
         display: flex;
@@ -39,11 +36,7 @@
             justify-content: flex-end;
 
             .fa {
-                margin-right: 15px;
-
-                &:active {
-                    transform: translateY(-1px);
-                }
+                @include mixins.icon;
             }
         }
 
