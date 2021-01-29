@@ -5,6 +5,7 @@ import { FooterComponent } from '../core/components/layout/footer/footer.compone
 import { LayoutComponent } from '../core/components/layout/layout.component';
 import { NavbarComponent } from '../core/components/layout/navbar/navbar.component';
 import { SidebarComponent } from '../core/components/layout/sidebar/sidebar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [LayoutComponent,
@@ -13,7 +14,8 @@ import { SidebarComponent } from '../core/components/layout/sidebar/sidebar.comp
         NavbarComponent],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        SharedModule
     ]
 })
 export class CoreModule { }
