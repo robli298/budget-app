@@ -4,7 +4,19 @@
         <p>Hello! Log in with your email.</p>
     </div>
     <div class="body">
-        <div class="control"></div>
+        <div class="wrap-login">
+            <form class="login-form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                <div class="wrap-form-control">
+                    <input formControlName="username" placeholder="Your Username" type="text"/>
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-form-control">
+                    <input formControlName="password" placeholder="Your Password" type="password" />
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-login-btn"><button type="submit">Login</button></div>
+            </form>
+        </div>
         <div class="register">
             <p>Don't have an account? <a href="#">Register</a></p>
         </div>

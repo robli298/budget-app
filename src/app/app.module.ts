@@ -1,7 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppConfigService } from '@app/services';
@@ -22,7 +20,7 @@ export function initializeApp(
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, FormsModule, MatDialogModule, HttpClientModule, CoreModule, AuthModule
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, CoreModule, AuthModule
   ],
   providers: [
     AppConfigService,
