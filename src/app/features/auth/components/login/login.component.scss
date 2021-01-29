@@ -17,8 +17,8 @@
 
     .panel {
         background-color: variables.$pure-white;
-        width: 50rem;
-        height: 55rem;
+        width: 45rem;
+        height: 45rem;
         box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
         border-radius: 1rem;
         display: flex;
@@ -118,6 +118,12 @@
                             height: 55px;
                             background-color: variables.$purple;
                             border-radius: 3px;
+                            cursor: pointer;
+                        }
+
+                        button:active {
+                            box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+                            transform: translateY(1px);
                         }
                     }
                 }

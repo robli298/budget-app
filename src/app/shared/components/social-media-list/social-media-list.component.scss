@@ -1,0 +1,23 @@
+@use "variables";
+
+:host {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.1em;
+    color: variables.$purple;
+
+    a {
+        margin: 10px;
+        text-decoration: none;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &.fa::before {
+            color: variables.$purple;
+        }
+    }
+
+    padding-right: 2em;
+}

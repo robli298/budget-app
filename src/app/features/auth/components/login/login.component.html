@@ -1,4 +1,4 @@
-<div class="panel">
+<div class="panel" >
     <div class="header">
         <h1 class="title">Login</h1>
         <p>Hello! Log in with your email.</p>
@@ -17,6 +17,10 @@
                 <div class="wrap-login-btn"><button type="submit">Login</button></div>
             </form>
         </div>
+        <!--<div *ngIf="layoutData$ | async as layoutData" class="social-media-area">
+            <a *ngFor="let socialMedia of data?.socialMedias;" href="{{socialMedia.url}}"
+                class="fa {{socialMedia.iconClass}}"></a>
+        </div>-->
         <div class="register">
             <p>Don't have an account? <a href="#">Register</a></p>
         </div>

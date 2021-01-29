@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { LayoutModel } from 'src/app/core/models';
+import { StateLayoutService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  layoutData$: Observable<LayoutModel>;
+
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private layoutService: StateLayoutService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({

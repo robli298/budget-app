@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './features/auth/auth.module';
+import { RootStoreModule } from './root-store/root-store.module';
 
 export function initializeApp(
   appConfig: AppConfigService
@@ -20,7 +21,7 @@ export function initializeApp(
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, HttpClientModule, CoreModule, AuthModule
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, CoreModule, AuthModule, RootStoreModule
   ],
   providers: [
     AppConfigService,
