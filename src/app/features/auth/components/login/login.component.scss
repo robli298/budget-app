@@ -129,6 +129,12 @@
                 }
             }
 
+            app-social-media-list {
+                flex: 0.3;
+                max-width: 25%;
+                margin-left: auto;
+            }
+
             .register {
                 flex: 0.1;
                 display: flex;
