@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { SocialMediaModel } from '@app/models';
 
 @Component({
   selector: 'app-social-media-list',
@@ -9,7 +10,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 export class SocialMediaListComponent implements OnInit {
 
   @Input()
-  socialMedias: {url: string, iconClass: string}
+  socialMedias: Array<SocialMediaModel>;
 
   constructor() { }
 

@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
+
+    this.layoutData$ = this.layoutService.load();
   }
 
   onSubmit(form: FormGroup) {

@@ -17,10 +17,7 @@
                 <div class="wrap-login-btn"><button type="submit">Login</button></div>
             </form>
         </div>
-        <!--<div *ngIf="layoutData$ | async as layoutData" class="social-media-area">
-            <a *ngFor="let socialMedia of data?.socialMedias;" href="{{socialMedia.url}}"
-                class="fa {{socialMedia.iconClass}}"></a>
-        </div>-->
+        <app-social-media-list *ngIf="layoutData$ | async as layoutData" [socialMedias]="layoutData.footer.socialMedias"></app-social-media-list>
         <div class="register">
             <p>Don't have an account? <a href="#">Register</a></p>
         </div>
