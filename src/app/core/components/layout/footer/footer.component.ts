@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { SocialMediaModel } from 'src/app/core/models';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,10 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 export class FooterComponent implements OnInit {
 
   @Input()
-  data: { "version": string, "socialMedias": Array<{ "url": string, "iconClass": string }> };
+  version: number;
+
+  @Input()
+  socialMedias: Array<SocialMediaModel>;
 
   constructor() { }
 

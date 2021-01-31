@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LayoutModel } from '@app/models';
+import { LayoutService } from '@app/services';
 import { Observable } from 'rxjs';
-import { LayoutModel } from 'src/app/core/models';
-import { StateLayoutService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private layoutService: StateLayoutService) { }
+  constructor(private formBuilder: FormBuilder, private layoutService: LayoutService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({

@@ -1,36 +1,32 @@
 {
-    "navbar": {
-        "alerts": [
-            {
-                "iconClass": "fa-comments-o"
-            },
-            {
-                "iconClass": "fa-envelope-o"
-            },
-            {
-                "iconClass": "fa-bell"
-            }
-        ]
-    },
-    "footer": {
-        "version": "1.0",
-        "socialMedias": [
-            {
-                "url": "#",
-                "iconClass": "fa-facebook"
-            },
-            {
-                "url": "#",
-                "iconClass": "fa-twitter"
-            },
-            {
-                "url": "#",
-                "iconClass": "fa-linkedin"
-            },
-            {
-                "url": "#",
-                "iconClass": "fa-github"
-            }
-        ]
-    }
+    "alerts": [
+        {
+            "iconClass": "fa-comments-o"
+        },
+        {
+            "iconClass": "fa-envelope-o"
+        },
+        {
+            "iconClass": "fa-bell"
+        }
+    ],
+    "version": "1.0",
+    "socialMedias": [
+        {
+            "url": "#",
+            "iconClass": "fa-facebook"
+        },
+        {
+            "url": "#",
+            "iconClass": "fa-twitter"
+        },
+        {
+            "url": "#",
+            "iconClass": "fa-linkedin"
+        },
+        {
+            "url": "#",
+            "iconClass": "fa-github"
+        }
+    ]
 }

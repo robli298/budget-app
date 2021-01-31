@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
 export class NavbarComponent implements OnInit {
 
   @Input()
-  data: any;
+  alerts: Array<{ class: string }>;
 
   @Output()
   toggleClicked = new EventEmitter<void>();

@@ -1,9 +1,9 @@
+import { SocialMediaModel } from "./social-media.model";
 
 export interface LayoutModel {
-    navbar: {
-        alerts: [
-            { class: string }
-        ]
-    }
-    footer: { version: number, socialMedias: Array<{ url: string, iconClass: string }> }
+    alerts: [
+        { class: string }
+    ];
+    version: number;
+    socialMedias: Array<SocialMediaModel>;
 }

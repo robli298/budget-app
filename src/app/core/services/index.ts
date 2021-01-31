@@ -1,3 +1,3 @@
 export * from './app-config.service';
-export * from './state-layout.service';
+export * from './layout.service';
 
