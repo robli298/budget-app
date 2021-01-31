@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class StateLayoutService {
+export class LayoutService {
     constructor(private http: HttpClient) { }
 
     load(): Observable<LayoutModel> {

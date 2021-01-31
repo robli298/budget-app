@@ -146,6 +146,7 @@
   },
   "defaultProject": "budget-app",
   "cli": {
-    "analytics": "12f4c1ec-df16-41a8-bf29-4648cdd5b767"
+    "analytics": "12f4c1ec-df16-41a8-bf29-4648cdd5b767",
+    "defaultCollection": "@ngrx/schematics"
   }
 }

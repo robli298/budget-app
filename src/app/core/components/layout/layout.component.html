@@ -1,6 +1,6 @@
 <div class="app-container" *ngIf="layoutData$ | async as layoutData">
     <div class="app-navbar">
-        <app-navbar [data]="layoutData.navbar" (toggleClicked)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
+        <app-navbar [alerts]="layoutData.alerts" (toggleClicked)="sidebarStatus = sidebarStatus === 'out' || !sidebarStatus ? 'in' : 'out'">
         </app-navbar>
     </div>
     <div class="app-main">
@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="app-footer">
-        <app-footer [data]="layoutData.footer"></app-footer>
+        <app-footer [socialMedias]="layoutData.socialMedias" [version]="layoutData.version"></app-footer>
     </div>
 </div>

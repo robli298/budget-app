@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LayoutModel } from "@app/models";
-import { StateLayoutService } from '@app/services';
+import { LayoutService } from '@app/services';
 import { Observable } from 'rxjs';
-
 
 @Component({
   templateUrl: './layout.component.html',
@@ -13,7 +12,7 @@ export class LayoutComponent implements OnInit {
 
   sidebarStatus: string;
 
-  constructor(private layoutService: StateLayoutService) { }
+  constructor(private layoutService: LayoutService) { }
 
   ngOnInit(): void {
     this.layoutData$ = this.layoutService.load();
