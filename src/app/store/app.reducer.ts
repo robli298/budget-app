@@ -1,25 +1,15 @@
-import { LayoutModel } from "@app/models";
+import { Action, createReducer, on } from '@ngrx/store';
+import { loadSocialMediasSuccess, requestLoadSocialMedias } from './app.actions';
+import { ApplicationState, initialState } from './app.state';
 
-export interface UIState {
-    isLoading: boolean,
-    errorMessage: string
-}
+export const appFeatureKey = 'app';
 
-export interface StoreData {
-    layoutData: LayoutModel
-}
+export const appReducer = createReducer(initialState, on(requestLoadSocialMedias, state => ({
+  ...state, uIState: {
+    isLoading: true
+  }
+})), on(loadSocialMediasSuccess, (state, { socialMedias}) => ({...state, storeData: {socialMedias: socialMedias}})));
 
-export interface ApplicationState {
-    uIState:UIState;
-    storeData: StoreData
-}
-
-export const initialApplicationState: ApplicationState = {
-    uIState: {
-        errorMessage: null,
-        isLoading: false
-    },
-    storeData: {
-        layoutData: undefined
-    }
+export function reducer(state: ApplicationState | undefined, action: Action) {
+  return appReducer(state, action);
 }
