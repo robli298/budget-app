@@ -17,7 +17,7 @@
                 <div class="wrap-login-btn"><button type="submit">Login</button></div>
             </form>
         </div>
-        <app-social-media-list *ngIf="layoutData$ | async as layoutData" [socialMedias]="layoutData.socialMedias"></app-social-media-list>
+        <app-social-media-list [socialMedias]="socialMedias$ | async"></app-social-media-list>
         <div class="register">
             <p>Don't have an account? <a href="#">Register</a></p>
         </div>

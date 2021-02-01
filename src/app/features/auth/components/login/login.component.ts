@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LayoutModel } from '@app/models';
-import { LayoutService } from '@app/services';
+import { SocialMediaModel } from '@app/models';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { requestLoadSocialMedias } from 'src/app/store/app.actions';
+import { selectSocialMedias } from 'src/app/store/app.selectors';
+import { ApplicationState } from 'src/app/store/app.state';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +14,11 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  layoutData$: Observable<LayoutModel>;
+  socialMedias$: Observable<Array<SocialMediaModel>>;
 
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private layoutService: LayoutService) { }
+  constructor(private formBuilder: FormBuilder, private store: Store<ApplicationState>) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -23,7 +26,9 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
 
-    this.layoutData$ = this.layoutService.load();
+    this.store.dispatch(requestLoadSocialMedias());
+
+    this.socialMedias$ = this.store.select(selectSocialMedias);
   }
 
   onSubmit(form: FormGroup) {

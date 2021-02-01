@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="app-footer">
-        <app-footer [socialMedias]="layoutData.socialMedias" [version]="layoutData.version"></app-footer>
+        <app-footer [socialMedias]="socialMedias$ | async" [version]="layoutData.version"></app-footer>
     </div>
 </div>

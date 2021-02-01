@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../core/components/layout/footer/footer.component';
@@ -13,7 +12,6 @@ import { SharedModule } from '../shared/shared.module';
         FooterComponent,
         NavbarComponent],
     imports: [
-        CommonModule,
         RouterModule,
         SharedModule
     ]

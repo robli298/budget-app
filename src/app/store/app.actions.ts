@@ -1,12 +1,8 @@
-import { createAction, props } from '@ngrx/store';
-import { LayoutModel } from '../core/models';
+import { createAction, props } from "@ngrx/store";
+import { SocialMediaModel } from "../core/models";
 
-export const requestLoadLayoutData = createAction('[App Init] Request Load Layout Data');
+export const requestLoadSocialMedias = createAction('[Init App] Request Load Social Medias');
 
-export const loadLayoutDataSuccess = createAction('[App Init] Load Layout Data Success', props<{
-    layoutData: LayoutModel
-}>());
+export const loadSocialMediasSuccess = createAction('[Init App] Load Social Medias Success', props<{ socialMedias: Array<SocialMediaModel> }>());
 
-export const loadLayoutDataFailure = createAction('[App Init] Load Layout Data Failure', props<{
-    errorMessage: string
-}>());
+export const loadSocialMediasFailure = createAction('[Init App] Load Social Medias Failure', props<{ errorMessage: string }>());

@@ -12,6 +12,7 @@ import { SocialMediaListComponent } from './components/social-media-list/social-
   exports: [
     ReactiveFormsModule,
     SocialMediaListComponent,
+    CommonModule
   ]
 })
 export class SharedModule { }
