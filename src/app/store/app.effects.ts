@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
+import { SocialMediaService } from "@app/services";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { map, shareReplay, switchMap } from 'rxjs/operators';
-import { SocialMediaService } from "../core/services";
-import { loadSocialMediasSuccess, requestLoadSocialMedias } from "./app.actions";
+import { map, switchMap } from 'rxjs/operators';
+import * as fromAppActions from "./app.actions";
 
 @Injectable()
 export class AppEffects {
     constructor(private actions$: Actions,
         private socialMediaService: SocialMediaService) { }
 
-    loadRequest$ = createEffect(() => this.actions$.pipe(ofType(requestLoadSocialMedias), switchMap(() =>
+    loadRequest$ = createEffect(() => this.actions$.pipe(ofType(fromAppActions.requestLoadSocialMedias), switchMap(() =>
         this.socialMediaService.load().pipe(map(socialMedias =>
-            loadSocialMediasSuccess({ socialMedias }), shareReplay(1)))
+            fromAppActions.loadSocialMediasSuccess({ socialMedias })))
     )));
 }

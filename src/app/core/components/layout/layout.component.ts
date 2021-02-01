@@ -3,8 +3,8 @@ import { LayoutModel, SocialMediaModel } from "@app/models";
 import { LayoutService } from '@app/services';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { requestLoadSocialMedias } from 'src/app/store/app.actions';
-import { selectSocialMedias } from 'src/app/store/app.selectors';
+import * as fromAppActions from 'src/app/store/app.actions';
+import * as fromAppSelectors from 'src/app/store/app.selectors';
 import { ApplicationState } from 'src/app/store/app.state';
 
 @Component({
@@ -22,8 +22,8 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     this.layoutData$ = this.layoutService.load();
 
-    this.store.dispatch(requestLoadSocialMedias());
+    this.store.dispatch(fromAppActions.requestLoadSocialMedias());
 
-    this.socialMedias$ = this.store.select(selectSocialMedias);
+    this.socialMedias$ = this.store.select(fromAppSelectors.selectSocialMedias);
   }
 }

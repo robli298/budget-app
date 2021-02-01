@@ -1,5 +1,5 @@
+import { SocialMediaModel } from "@app/models";
 import { createAction, props } from "@ngrx/store";
-import { SocialMediaModel } from "../core/models";
 
 export const requestLoadSocialMedias = createAction('[Init App] Request Load Social Medias');
 
