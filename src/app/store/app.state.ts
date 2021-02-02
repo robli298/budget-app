@@ -7,21 +7,11 @@ export interface UIState {
 }
 
 export interface StoreData {
-    socialMedias: Array<SocialMediaModel>;
+    socialMedias: ReadonlyArray<SocialMediaModel>;
 }
 
 // root state
 export interface ApplicationState {
     uIState: UIState,
     storeData: StoreData
-}
-
-export const initialState: ApplicationState = {
-    uIState: {
-        isLoading: false,
-        errorMessage: null
-    },
-    storeData: {
-        socialMedias: []
-    }
 }

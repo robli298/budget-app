@@ -1,14 +1,24 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { loadSocialMediasSuccess, requestLoadSocialMedias } from './app.actions';
-import { ApplicationState, initialState } from './app.state';
+import * as fromApp from './app.actions';
+import { ApplicationState } from './app.state';
 
 export const appFeatureKey = 'app';
 
-export const appReducer = createReducer(initialState, on(requestLoadSocialMedias, state => ({
+export const initialState: ApplicationState = {
+  uIState: {
+    isLoading: false,
+    errorMessage: null
+  },
+  storeData: {
+    socialMedias: []
+  }
+}
+
+export const appReducer = createReducer(initialState, on(fromApp.requestLoadSocialMedias, state => ({
   ...state, uIState: {
     isLoading: true
   }
-})), on(loadSocialMediasSuccess, (state, { socialMedias}) => ({...state, storeData: {socialMedias: socialMedias}})));
+})), on(fromApp.loadSocialMediasSuccess, (state, { socialMedias }) => ({ ...state, storeData: { socialMedias: socialMedias } })));
 
 export function reducer(state: ApplicationState | undefined, action: Action) {
   return appReducer(state, action);
