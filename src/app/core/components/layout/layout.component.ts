@@ -13,7 +13,7 @@ import { ApplicationState } from 'src/app/store/app.state';
 })
 export class LayoutComponent implements OnInit {
   layoutData$: Observable<LayoutModel>;
-  socialMedias$: Observable<Array<SocialMediaModel>>;
+  socialMedias$: Observable<ReadonlyArray<SocialMediaModel>>;
 
   sidebarStatus: string;
 

@@ -24,7 +24,7 @@ export function initializeApp(
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule, BrowserAnimationsModule, HttpClientModule, CoreModule, AuthModule, StoreModule.forRoot({ 'app': fromApp.reducer}), EffectsModule.forRoot([AppEffects])],
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, CoreModule, AuthModule, StoreModule.forRoot({ [fromApp.appFeatureKey]: fromApp.reducer}), EffectsModule.forRoot([AppEffects])],
   providers: [
     AppConfigService,
     {
