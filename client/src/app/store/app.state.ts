@@ -3,7 +3,7 @@ import { SocialMediaModel } from "@app/models";
 // states purely related to the UI
 export interface UIState {
     isLoading: boolean;
-    errorMessage: string;
+    errorMessage: string | null;
 }
 
 export interface StoreData {

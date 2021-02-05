@@ -13,7 +13,7 @@ export class AppConfigService {
         const configFileJsonUrl = `assets/config/config.${environment.name}.json`;
 
         return new Promise<void>((resolve, reject) => {
-            this.http.get(configFileJsonUrl).toPromise().then((response: AppConfig) => {
+            this.http.get<AppConfig>(configFileJsonUrl).toPromise().then((response: AppConfig) => {
                 AppConfigService.settings = response;
                 resolve();
             }).catch(error => {
