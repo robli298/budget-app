@@ -10,10 +10,10 @@ import { SocialMediaModel } from 'src/app/core/models';
 export class FooterComponent implements OnInit {
 
   @Input()
-  version: number;
+  version!: number;
 
   @Input()
-  socialMedias: Array<SocialMediaModel>;
+  socialMedias!: Array<SocialMediaModel>;
 
   constructor() { }
 

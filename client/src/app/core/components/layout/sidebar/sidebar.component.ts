@@ -22,7 +22,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 export class SidebarComponent implements OnInit {
 
   @Input()
-  sidebarStatus: string;
+  sidebarStatus!: string;
 
   constructor() { }
 

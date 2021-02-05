@@ -13,9 +13,9 @@ import { ApplicationState } from 'src/app/store/app.state';
 })
 export class LoginComponent implements OnInit {
 
-  socialMedias$: Observable<ReadonlyArray<SocialMediaModel>>;
+  socialMedias$!: Observable<ReadonlyArray<SocialMediaModel>>;
 
-  loginForm: FormGroup;
+  loginForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private store: Store<ApplicationState>) { }
 

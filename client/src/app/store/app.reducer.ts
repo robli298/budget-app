@@ -16,7 +16,8 @@ export const initialState: ApplicationState = {
 
 export const appReducer = createReducer(initialState, on(fromApp.requestLoadSocialMedias, state => ({
   ...state, uIState: {
-    isLoading: true
+    isLoading: true,
+    errorMessage: null
   }
 })), on(fromApp.loadSocialMediasSuccess, (state, { socialMedias }) => ({ ...state, storeData: { socialMedias: socialMedias } })));
 

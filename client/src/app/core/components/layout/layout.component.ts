@@ -12,10 +12,10 @@ import { ApplicationState } from 'src/app/store/app.state';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  layoutData$: Observable<LayoutModel>;
-  socialMedias$: Observable<ReadonlyArray<SocialMediaModel>>;
+  layoutData$!: Observable<LayoutModel>;
+  socialMedias$!: Observable<ReadonlyArray<SocialMediaModel>>;
 
-  sidebarStatus: string;
+  sidebarStatus!: string;
 
   constructor(private layoutService: LayoutService,  private store: Store<ApplicationState>) { }
 

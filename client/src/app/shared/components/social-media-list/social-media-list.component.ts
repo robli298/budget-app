@@ -10,7 +10,7 @@ import { SocialMediaModel } from '@app/models';
 export class SocialMediaListComponent implements OnInit {
 
   @Input()
-  socialMedias: ReadonlyArray<SocialMediaModel>;
+  socialMedias!: ReadonlyArray<SocialMediaModel>;
 
   constructor() { }
 
