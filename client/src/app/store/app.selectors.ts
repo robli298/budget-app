@@ -5,5 +5,5 @@ import { ApplicationState } from "./app.state";
 const selectAppFeatureState = createFeatureSelector<ApplicationState>(appFeatureKey);
 
 export const selectSocialMedias = createSelector(selectAppFeatureState, state => {
-    return state.storeData.socialMedias;
+    return state?.storeData?.socialMedias;
 });

@@ -1,11 +1,18 @@
-export function AutoUnsubscribe(blackList = []) {
-    return function (constructor: any) {
-        const original = constructor.prototype.ngOnDestroy;
+export function AutoUnsubscribe(blackList: string[] = []) {
+    return  function (constructor: any) {
 
-        constructor.prototype.ngOnDestroy = function (this: any) {
+        let original = constructor.prototype.ngOnDestroy;
+
+        constructor.prototype.ngOnDestroy = function (this) {
+
+            original?.bind(this, arguments);
+
             for (let prop in this) {
                 const property = this[prop];
-                if (!blackList.includes(prop as never)) {
+
+                if (!blackList.includes(prop)) {
+
+                    console.log(property.unsubscribe);
                     if (property && (typeof property.unsubscribe === "function")) {
                         property.unsubscribe();
                     }
@@ -13,6 +20,6 @@ export function AutoUnsubscribe(blackList = []) {
             }
         }
 
-        original && typeof original === "function" && original.apply(this, arguments);
+        original && typeof original === "function" && original();
     }
 }
