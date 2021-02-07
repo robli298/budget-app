@@ -30,6 +30,7 @@
     "@ngrx/schematics": "^10.1.0",
     "@ngrx/store": "^10.1.0",
     "@ngrx/store-devtools": "^10.1.0",
+    "angular2-take-until-destroy": "^2.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
