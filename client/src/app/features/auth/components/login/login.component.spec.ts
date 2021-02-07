@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideMockStore } from '@ngrx/store/testing';
 import { LoginComponent } from './login.component';
+
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -8,7 +10,9 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      imports: [ReactiveFormsModule],
+      declarations: [ LoginComponent ],
+      providers: [provideMockStore({})]
     })
     .compileComponents();
   });
@@ -19,7 +23,12 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  afterEach(() => {
+    fixture.destroy();
+  });
+
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

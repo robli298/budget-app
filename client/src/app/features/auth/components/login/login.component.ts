@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private store: Store<ApplicationState>) { }
 
   ngOnInit(): void {
+
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -33,5 +34,4 @@ export class LoginComponent implements OnInit {
   onSubmit(form: FormGroup) {
     console.log(form.value)
   }
-
 }
