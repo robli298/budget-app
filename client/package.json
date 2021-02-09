@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve dependencies",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dependencies": "npm outdated --long=true > dependencies.txt"
+    "dependencies": "npm outdated --long=true > src/assets/data/dependencies.txt"
   },
   "private": true,
   "dependencies": {
